@@ -17,16 +17,28 @@ p {
     padding: 0;
 }
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: scroll;
+}
+
+body {
     padding: 0;
     background-color: var(--background-color);
     font-family: 'Andale Mono', "Courier", "Courier New", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header {
+header, footer {
     width: 100vw;
-    height: 4vh;
+    height: auto;
+    padding: 10px;
     background-color: var(--primary-color);
     outline: 2px solid var(--border-color);
     color: var(--text-color);
@@ -36,15 +48,19 @@ header {
     align-items: center;
 }
 
-header p {
+header p, footer p {
     padding-left: 5px;
     text-decoration: underline;
 }
 
 main {
-    width: 100vw;
-    height: 92vh;
+    width: 100%;
+    flex: 1 0 auto;
     color: var(--text-color);
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
     display: flex;
     justify-content: center;
@@ -53,21 +69,4 @@ main {
 
 main p {
     font-size: 30px;
-}
-
-footer {
-    width: 100vw;
-    height: 4vh;
-    background-color: var(--primary-color);
-    outline: 2px solid var(--border-color);
-    color: var(--text-color);
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-footer p {
-    padding-left: 5px;
-    text-decoration: underline;
 }
