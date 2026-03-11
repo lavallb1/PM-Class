@@ -1,0 +1,138 @@
+/* color palette */
+
+:root {
+    --primary-color: rgb(207, 152, 42);
+    --secondary-color: rgb(210, 120, 60);
+    --accent-color: rgb(70, 170, 160);
+
+    --primary-gradient: linear-gradient(135deg, hsl(45 98% 51%), hsl(350 75% 50%));
+    
+    --background-color: rgb(60, 48, 32);
+    --background-gradient: linear-gradient(45deg, rgb(60, 48, 32), rgb(118, 92, 58));
+    --secondary-background-color: rgb(93, 75, 49);
+    --border-color: rgba(208, 175, 131, 0.7);
+
+    --text-color: rgb(240, 230, 210);
+}
+
+/* element styling */
+
+p {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: scroll;
+}
+
+body {
+    padding: 0;
+    background-image: var(--background-gradient);
+    font-family: 'Andale Mono', "Courier", "Courier New", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    width: 100vw;
+    height: auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+    outline: 2px solid var(--border-color);
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header p, footer p {
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    flex: 1 0 auto;
+    color: var(--text-color);
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+    font-size: 30px;
+}
+
+/* classes */
+
+.div-main-container {
+    width: 80%;
+    max-width: 500px;
+    height: 70%;
+    max-height: 800px;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    padding: 5px;
+
+    background-color: var(--secondary-background-color);
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.div-main-info-container {
+    width: 95%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox-HorizCenter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border1 {
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+}
+
+/* id */
+
+#text-styling-demo p {
+    font-size: 20px;
+}
