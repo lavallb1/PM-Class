@@ -38,6 +38,47 @@
             border: 1px solid var(--border-color);
             margin-top: 10px;
         }
+
+        .audio-Player {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 23%;
+        }
+        
+        .playPause {
+            width: 25px;
+            height: 25px;
+
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: rgb(223, 209, 199);
+
+            background-image: radial-gradient(circle at center, rgba(255,255,255,0.2) 20%, transparent 41%);
+            background-size: 0% 0%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            transition: transform 0.1s ease, background-size 0.3s ease;
+            cursor: pointer;
+        }
+
+        .playPause:hover {
+            transform: scale(1.1);
+            background-size: 180% 180%;
+        }
+
+        .playPause::before {
+            content: "▶";
+        }
+
+        .playPause.playing::before {
+            content: "⏸";
+            font-size: 28px;
+            display: inline-block;
+            transform: translateY(-5px) translateX(-2px);
+        }
     </style>
 </head>
 
@@ -52,12 +93,17 @@
     </header>
 
     <main>
-        <div class="title div-background">
+        <div class="title div-background radial">
             <h1>Quotes</h1>
         </div>
 
         <div class="flexbox-Row" style="height: 80%; align-items: center;">
             <div class="div-background flexbox-Column container" style="text-align:center;">
+                <div class="audio-Player">
+                    <audio src="../audios/please-speed-i-need-this.mp3"></audio>
+                    <button class="playPause"></button>
+                </div>
+
                 <h2 style="margin-bottom: 10px">Please Speed <br> I need this</h2>
                 
                 <div class="middle">
@@ -79,6 +125,11 @@
             </div>
 
             <div class="div-background flexbox-Column container" style="text-align:center;">
+                <div class="audio-Player">
+                    <audio src="../audios/homero.mp3"></audio>
+                    <button class="playPause"></button>
+                </div>
+                
                 <h2 style="margin-bottom: 10px">Homero</h2>
                 
                 <div class="middle">
@@ -102,6 +153,11 @@
             </div>
 
             <div class="div-background flexbox-Column container" style="text-align:center;">
+                <div class="audio-Player">
+                    <audio src="../audios/bbq-chicken-alert.mp3"></audio>
+                    <button class="playPause"></button>
+                </div>
+                
                 <h2 style="margin-bottom: 10px">BBQ Chicken Alert</h2>
                 
                 <div class="middle">
@@ -129,5 +185,6 @@
     </footer>
 
     <script src="../javascript/main.js"></script>
+    <script src="../javascript/audioPlayer.js"></script>
 </body>
 </html>

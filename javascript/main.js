@@ -4,8 +4,9 @@ document.querySelectorAll("a").forEach(link => {
   
       e.preventDefault();
   
-      document.querySelector("header nav").classList.add("page-exit");
-      document.querySelector("main").classList.add("page-exit");
+      document.querySelector("header").classList.add("headerExit");
+      document.querySelector("main").classList.add("mainExit");
+      document.querySelector("footer").classList.add("footerExit");
   
       setTimeout(() => {
         window.location = href;

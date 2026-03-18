@@ -13,19 +13,44 @@
     --border-color: rgba(208, 175, 131, 0.7);
 
     --text-color: rgb(240, 230, 210);
+
+    /* animation vars */
+
+    --main-scale: 0.9;
+    --offsets: 50px;
 }
 
 /* ---------- keyframes ---------- */
 
-@keyframes fadeIn {
+@keyframes headerIn {
+    from {
+        transform: translateY(calc(-1*var(--offsets)));
+      }
+    
+      to {
+        transform: translateY(0);
+      }
+}
+
+@keyframes footerIn {
+    from {
+        transform: translateY(var(--offsets));
+      }
+    
+      to {
+        transform: translateY(0);
+      }
+}
+
+@keyframes mainIn {
     from {
         opacity: 0;
-        transform: translateX(30px);
+        transform: scale(var(--main-scale));
       }
     
       to {
         opacity: 1;
-        transform: translateX(0);
+        transform: scale(1);
       }
 }
 
@@ -86,10 +111,23 @@ header, footer {
     background-color: var(--primary-color);
     outline: 2px solid var(--border-color);
     color: var(--text-color);
+    
+    
 
     display: flex;
     justify-content: left;
     align-items: center;
+    
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+header {
+    animation: headerIn 0.4s ease;
+}
+
+footer {
+    animation: footerIn 0.4s ease;
 }
 
 header p, footer p {
@@ -97,9 +135,10 @@ header p, footer p {
 }
 
 header nav {
-    position: absolute;
-    width: 100%;
-    margin-left: -20px;
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 20px;
 
     display: flex;
     justify-content: right;
@@ -131,7 +170,7 @@ main {
     align-items: center;
 
     transition: opacity 0.4s ease, transform 0.4s ease;
-    animation: fadeIn 0.4s ease;
+    animation: mainIn 0.4s ease;
 }
 
 main p {
@@ -209,9 +248,17 @@ main p {
 
 /* animating */
 
-.page-exit {
+.headerExit {
+    transform: translateY(calc(-1*var(--offsets)));
+}
+
+.footerExit {
+    transform: translateY(var(--offsets));
+}
+
+.mainExit {
     opacity: 0;
-    transform: translateX(30px);
+    transform: scale(var(--main-scale));
 }
 
 /* extra classes */
