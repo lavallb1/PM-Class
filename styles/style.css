@@ -221,6 +221,10 @@ main p {
     border: 1px solid var(--border-color);
 }
 
+.radial {
+    background: linear-gradient(0deg, rgba(0,0,0,0), rgba(234, 208, 174, 0.2), rgba(0,0,0,0));
+}
+
 /* id */
 
 #text-styling-demo p {
