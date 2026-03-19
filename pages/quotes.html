@@ -30,6 +30,14 @@
             width: 350px;
             height: fit-content;
             padding: 10px;
+            position: relative;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 5px rgba(208, 175, 131, 0.7), 0 0 10px rgba(208, 175, 131, 0.7), 0 0 15px rgba(255,255,255,0.5);
         }
 
         .description-Text {
@@ -43,7 +51,7 @@
             width: 25px;
             height: 25px;
             position: absolute;
-            left: 23%;
+            left: 5%;
         }
         
         .playPause {
@@ -55,18 +63,12 @@
             font-size: 20px;
             color: rgb(223, 209, 199);
 
-            background-image: radial-gradient(circle at center, rgba(255,255,255,0.2) 20%, transparent 41%);
-            background-size: 0% 0%;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            transition: transform 0.1s ease, background-size 0.3s ease;
+            transition: transform 0.1s ease;
             cursor: pointer;
         }
 
         .playPause:hover {
             transform: scale(1.1);
-            background-size: 180% 180%;
         }
 
         .playPause::before {
