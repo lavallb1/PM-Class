@@ -13,3 +13,54 @@ document.querySelectorAll("a").forEach(link => {
       }, 400);
     });
 });
+
+// theme selection
+const theme_buttons = document.querySelectorAll(".button-theme");
+
+const themeImages = {
+  light: {
+    active: "../images/icons/brightness.png",
+    inactive: "../images/icons/brightness-2.png"
+  },
+  dark: {
+    active: "../images/icons/moon-stars.png",
+    inactive: "../images/icons/moon-stars-2.png"
+  },
+  autumn: {
+    active: "../images/icons/leaf-maple-2.png",
+    inactive: "../images/icons/leaf-maple.png"
+  }
+};
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+
+  localStorage.setItem("theme", theme);
+
+  theme_buttons.forEach(btn => {
+    const btnTheme = btn.dataset.theme;
+    const btnImg = btn.querySelector("img");
+
+    console.log(btnTheme, theme);
+    if (btnTheme === theme) {
+      btnImg.src = themeImages[btnTheme].active;
+    } else {
+      btnImg.src = themeImages[btnTheme].inactive;
+    }
+  });
+}
+
+// load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  setTheme(savedTheme);
+}
+
+// setting themes
+
+theme_buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const theme = btn.dataset.theme;
+    setTheme(theme);
+  });
+});

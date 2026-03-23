@@ -6,7 +6,8 @@
     --accent-color: rgb(70, 170, 160);
 
     --primary-gradient: linear-gradient(135deg, hsl(45 98% 51%), hsl(350 75% 50%));
-    
+    --title-gradient: linear-gradient(0deg, rgba(0,0,0,0), rgba(234, 208, 174, 0.2), rgba(0,0,0,0));;
+
     --background-color: rgb(60, 48,  32);
     --background-gradient: linear-gradient(45deg, rgb(60, 48, 32), rgb(118, 92, 58));
     --secondary-background-color: rgb(93, 75, 49);
@@ -18,6 +19,38 @@
 
     --main-scale: 0.9;
     --offsets: 50px;
+}
+
+:root[data-theme="light"] {
+    --primary-color: rgb(243, 218, 171);
+    --secondary-color: rgb(113, 103, 96);
+    --accent-color: rgb(88, 219, 127);
+
+    --primary-gradient: linear-gradient(135deg, hsl(45 90% 55%), hsl(20 80% 60%));
+    --title-gradient: linear-gradient(0deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.15), rgba(0,0,0,0));;
+
+    --background-color: rgb(250, 246, 240);
+    --background-gradient: linear-gradient(45deg, rgb(250, 246, 240), rgb(244, 223, 196));
+    --secondary-background-color: rgb(255, 250, 240);
+    --border-color: rgba(120, 90, 60, 0.2);
+
+    --text-color: rgb(40, 35, 30);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: rgb(31, 30, 44);
+    --secondary-color: rgb(35, 104, 82);
+    --accent-color: rgb(70, 147, 218);
+
+    --primary-gradient: linear-gradient(135deg, hsl(45 90% 55%), hsl(10 85% 60%));
+    --title-gradient: linear-gradient(0deg, rgba(0,0,0,0), rgba(234, 208, 174, 0.2), rgba(0,0,0,0));;
+
+    --background-color: rgb(18, 18, 20);
+    --background-gradient: linear-gradient(45deg, rgb(18, 18, 20), rgb(40, 32, 24));
+    --secondary-background-color: rgb(28, 28, 32);
+    --border-color: rgba(255, 200, 140, 0.2);
+
+    --text-color: rgb(235, 235, 235);
 }
 
 /* ---------- keyframes ---------- */
@@ -130,6 +163,16 @@ footer {
     animation: footerIn 0.4s ease;
 }
 
+footer section {
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: right;
+}
+
 header p, footer p {
     padding-left: 5px;
 }
@@ -142,9 +185,6 @@ header nav {
 
     display: flex;
     justify-content: right;
-
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    animation: fadeIn 0.4s ease;
 }
 
 header nav p {
@@ -269,7 +309,44 @@ main p {
 }
 
 .radial {
-    background: linear-gradient(0deg, rgba(0,0,0,0), rgba(234, 208, 174, 0.2), rgba(0,0,0,0));
+    background: var(--title-gradient)
+}
+
+.button-theme {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 12px;
+
+    transition: transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-theme img {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+
+    width: 20px;
+    height: 20px;
+}
+
+img.theme-icon {
+    transition: filter 0.3s ease;
+    filter: brightness(0);
+}
+  
+[data-theme="dark"] .button-theme img,
+[data-theme="autumn"] .button-theme img {
+    filter: brightness(0) invert(1);
+}
+
+.button-theme:hover {
+    transform: scale(1.1);
 }
 
 /* id */
