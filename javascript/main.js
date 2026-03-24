@@ -19,16 +19,16 @@ const theme_buttons = document.querySelectorAll(".button-theme");
 
 const themeImages = {
   light: {
-    active: "../images/icons/brightness.png",
-    inactive: "../images/icons/brightness-2.png"
+    active: "/images/icons/brightness.png",
+    inactive: "/images/icons/brightness-2.png"
   },
   dark: {
-    active: "../images/icons/moon-stars.png",
-    inactive: "../images/icons/moon-stars-2.png"
+    active: "/images/icons/moon-stars.png",
+    inactive: "/images/icons/moon-stars-2.png"
   },
   autumn: {
-    active: "../images/icons/leaf-maple-2.png",
-    inactive: "../images/icons/leaf-maple.png"
+    active: "/images/icons/leaf-maple-2.png",
+    inactive: "/images/icons/leaf-maple.png"
   }
 };
 
