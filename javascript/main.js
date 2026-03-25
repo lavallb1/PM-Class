@@ -17,18 +17,20 @@ document.querySelectorAll("a").forEach(link => {
 // theme selection
 const theme_buttons = document.querySelectorAll(".button-theme");
 
+const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+
 const themeImages = {
   light: {
-    active: "/images/icons/brightness.png",
-    inactive: "/images/icons/brightness-2.png"
+    active: basePath + "images/icons/brightness.png",
+    inactive: basePath + "images/icons/brightness-2.png"
   },
   dark: {
-    active: "/images/icons/moon-stars.png",
-    inactive: "/images/icons/moon-stars-2.png"
+    active: basePath + "images/icons/moon-stars.png",
+    inactive: basePath + "images/icons/moon-stars-2.png"
   },
   autumn: {
-    active: "/images/icons/leaf-maple-2.png",
-    inactive: "/images/icons/leaf-maple.png"
+    active: basePath + "images/icons/leaf-maple-2.png",
+    inactive: basePath + "images/icons/leaf-maple.png"
   }
 };
 
