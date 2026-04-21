@@ -190,6 +190,7 @@ header nav {
 header nav p {
     padding-left: 10px;
     text-decoration: underline;
+    word-break:unset;
 }
 
 main {

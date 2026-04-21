@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="The homepage of the website.">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <style>
+        .card {
+            width: fit-content;
+            margin: 20px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            width: 250px;
+        }
+
+        .card p {
+            margin-top: 6px;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p style="position: fixed">Homepage</p>
+
+        <nav>
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="text.html">Text Demo</a></p>
+            <p><a href="quotes.html">Quotes</a></p>
+            <p><a href="gifs.html">Gifs</a></p>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title div-background radial">
+            <h1>Gifs</h1>
+        </div>
+
+        <div class="flexbox-Row" style="height: 80%; align-items: center;">
+            <div class="card">
+                <img src="../images/gifs/gif1.gif" type="images/gifs">
+                <p style="text-align: center;">Dayton and Charles</p>
+            </div>
+
+            <div class="card">
+                <img src="../images/gifs/fish.gif" type="images/gifs">
+                <p style="text-align: center;">Fishing</p>
+            </div>
+
+            <div class="card">
+                <img src="../images/gifs/slideshow.gif" type="images/gifs">
+                <p style="text-align: center;">Slideshow</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>abcdefghijklmnopqrstuvwxyz</p>
+
+        <section>
+            <button class="button-theme" data-theme="light">
+                <img src="images/icons/brightness-2.png">
+            </button>
+
+            <button class="button-theme" data-theme="dark">
+                <img src="images/icons/moon-stars-2.png">
+            </button>
+
+            <button class="button-theme" data-theme="autumn">
+                <img src="images/icons/leaf-maple-2.png">
+            </button>
+        </section>
+    </footer>
+
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
