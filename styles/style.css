@@ -96,6 +96,10 @@ p {
     transition: transform 0.2s ease;
 }
 
+li {
+    transition: transform 0.2s ease;
+}
+
 a {
     color: inherit;
 }
@@ -107,6 +111,10 @@ img {
 }
 
 p:has(a:hover) {
+    transform: scale(1.08);
+}
+
+li:has(a:hover) {
     transform: scale(1.08);
 }
 
@@ -145,8 +153,6 @@ header, footer {
     outline: 2px solid var(--border-color);
     color: var(--text-color);
     
-    
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -307,6 +313,15 @@ main p {
 .border1 {
     border-radius: 2px;
     border: 1px solid var(--border-color);
+}
+
+.background1 {
+    background-color: var(--secondary-background-color);
+}
+
+.noscrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .radial {
