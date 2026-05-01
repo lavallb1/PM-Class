@@ -233,6 +233,7 @@ main p {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    min-height: 0;
 }
 
 /* div classes */
@@ -243,7 +244,6 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
 .div-background {
