@@ -7,6 +7,40 @@
     <meta name="description" content="The homepage of the website.">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="favicon.ico"/>
+
+    <style>
+        .card {
+            width: 20%;
+            min-width: 400px;
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            background-color: var(--secondary-background-color);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .card img {
+            width: 300px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .page-content {
+            margin: 10px;
+        }
+
+        .aboutmeLeft {
+            width: 28%;
+            height: 100%;
+        }
+
+        .aboutmeRight {
+            width: 68%;
+            height: 100%;
+            padding-left: 4%;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,30 +48,148 @@
         <p>Homepage</p>
 
         <nav>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="pages/text.html">Text Demo</a></p>
-            <p><a href="pages/quotes.html">Quotes</a></p>
-            <p><a href="pages/gifs.html">Gifs</a></p>
-            <p><a href="pages/demopage.html">Seahorse Serenity</a></p>
+            <p><span><a href="index.html">Home</a></span></p>
+            <p><span><a href="pages/text.html">Text Demo</a></span></p>
+            <p><span><a href="pages/quotes.html">Quotes</a></span></p>
+            <p><span><a href="pages/gifs.html">Gifs</a></span></p>
+            <p><span><a href="pages/demopage.html">Seahorse Serenity</a></span></p>
         </nav>
     </header>
 
     <main>
         <div class="title div-background radial">
-            <h1>Blake Website</h1>
+            <h1>Blake Portfolio Website</h1>
         </div>
 
-        <div class="page-content flexbox-Column">
-            <h2 style="padding-bottom: 10px;">nothing here yet</h2>
+        <div class="flexbox-Column noscrollbar page-content" style="overflow-y: auto; height: 80%;">
+            <h1 style="text-align: center; padding-bottom: 1rem;">-- About Me --</h1>
+            
+            <div class="flexbox-Row" style="text-align: center">
+                <p style="width: 60%; font-size: 1.5rem;">
+                    My name is Blake LaValley, I am 17 years old and attend Grand Ledge High School and LCC via the EATON Resa program. 
+                    As of May 20, 2026 I am a Junior and will be attending a game design class at Davenport University next year under the EATON Resa program. 
+                    Outside of Highschool and EATON Resa, I work for my parents business (<span style="color: var(--accent-color); text-decoration: underline;"><a href="https://choilcrisp.com">ChOil</a></span>) and will more than likely have a job over the summer.
+                    In my free time, I work on web projects and enjoy spending time with friends and family.
+                    Me personally, I enjoy the outdoors when it's nice outside, so I tend to spend some time outside during the summer when I can.
+                    Regarding sports, I've been shooting arrows for the archery team since 4th grade and haven't taken any years off. I'd like to say I'm pretty good.
+                    Any additional formal information can be viewed on my resume below, and links to other pages I had to make in class are at the top right.
+                </p>
+                <div class="flexbox-Column aboutme-Left">
+                    
+                </div>
 
-            <h3>look at the <span style="color: var(--accent-color); text-decoration: underline;">
-                top right
-            </span></h3>
+                <div class="flexbox-Column aboutme-Right">
+                    
+                </div>
+            </div>
+
+            <h1 style="text-align: center; padding-bottom: 1rem;">-- Resume --</h1>
+            
+            <div style="display: flex; justify-content: center; width: 100%">
+                <iframe
+                    src="https://docs.google.com/document/d/e/2PACX-1vRlJV-Rfn4aZ_dE2cBGwhwchoV3XVhDjKqJqRe8mdXYUMTtdz4BQdvJdusBVIQ7Pw/pub?embedded=true"
+                    width="100%"
+                    height="600"
+                    style="border:none; width: 816px; min-height: 1000px; padding-bottom: 1rem;">
+                </iframe>
+            </div>
+
+            <h1 style="text-align: center; padding-bottom: 1rem;">-- Artworks --</h1>
+            
+            <div class="flexbox-Row" style="height: fit-content; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+                <div class="card flexbox-Column">
+                    <p>Ambiguous Size</p>
+                    <img src="images/portfolio/ambiguous size.png" alt="ambiguous size project">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        This is a project I made in Photoshop in roughly 20 minutes. You might be wondering "why would he put this on here
+                        if he didn't put any effort into it?" The project was for a competition between the AM and PM class for Digital Media &
+                        Design at LCC. We had to make a photoshop composition that represented ambiguous size, and I had no idea what to make.
+                        It took me about 40 minutes to an hour to settle with this design, and I'm proud of the thought process that got me to
+                        this conclusion. In the image, you are blowing bubbles that have planets or moons inside of them, which puts the planets
+                        and moons down to a relatable scale for humans, illustrating ambiguous scale.
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ May 19, 2026
+                    </p>
+                </div>
+    
+                <div class="card flexbox-Column">
+                    <p style="text-align: center;">David W/ Straight Lines</p>
+                    <img src="images/portfolio/michelangelo straight lines.jpg" alt="Michelangelo W/ Straight Lines">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        One project we had to do in Digital Media & Design was studying a famous artist and recreate one of their famous art pieces.
+                        I chose Michelangelo's David sculpture. The research and writing assignment took about 2-3 days, and this took 2 days to make.
+                        For reference, each day in class was about 2 hours. I didn't know how to recreate David digitally, so I decided to trace
+                        prominent lines and hope for the best. Lucky for me, I like the result. I overlayed the straight line design over the original
+                        sculpture and put some other elements in the composition to make it feel more complete. And here we are.
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ Feb 17, 2026
+                    </p>
+                </div>
+    
+                <div class="card flexbox-Column">
+                    <p>Nighttime Road</p>
+                    <img src="images/portfolio/tree road.jpg" alt="Nighttime Road">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        For the Digital Media & Design class in the EATON Resa program, one of our assignments was to mess around with perspective warping
+                        in Photoshop. Our class had to create a Photoshop project that looked like it stretched on into the horizon forever. 
+                        Originally, I wanted my composition to look more 3D, but in the end it turned out looking like a retro 2D game that
+                        has a road stretching out into infinity. And yes, I did make the galaxy in the sky.
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ Dec 8, 2025
+                    </p>
+                </div>
+            </div>
+
+            <div class="flexbox-Row" style="height: fit-content; align-items: flex-start; gap: 10px;">
+                <div class="card flexbox-Column">
+                    <p>Steamfest Poster</p>
+                    <img src="images/portfolio/steamfest poster.jpg" alt="steamfest poster">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        Since this project was at the start of the year, my memory is a little hazy when it comes to remembering what I did for it.
+                        My class was told to make a poster for the upcoming SteamFest event, and we were given information and guidelines for what to put on the poster.
+                        This poster was made at the start of when I was learning how to use photoshop, so I am confident I could make a better piece with the skills I
+                        have accumulated now. Disregarding that, I am, and was, happy with how the poster turned out. Although the text in the center is a little hard
+                        to read, I do believe I did well with the skillset I had.
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ Nov 6, 2025
+                    </p>
+                </div>
+    
+                <div class="card flexbox-Column">
+                    <p>Optical Illusion</p>
+                    <img src="images/portfolio/optical illusion.png" alt="steamfest poster">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        I think optical illisions are pretty cool so I decided to make one for this portfolio. In this optical illusion, there is a fisheye warp applied to the
+                        layers that move, and the column in the middle of the three is facing the opposite way (which is what creates the optical illusion). This is one of two
+                        projects made in Photoshop that were needed in this portfolio for full credit. Our class had to create two new art pieces and have 4 old art pieces in 
+                        this portfolio for full credit. The other one that I had to make is the next piece on this list.
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ May 21, 2026
+                    </p>
+                </div>
+    
+                <div class="card flexbox-Column">
+                    <p>Placeholder</p>
+                    <img src="images/portfolio/placeholder.jpg" alt="steamfest poster">
+                    <p style="font-size: 1rem; text-align: center; padding-bottom: 0.8rem;">
+                        some example text explaining what this is
+                    </p>
+                    <p style="font-size: 0.5rem; left: 5px; top: calc(100% - 0.8rem); position: absolute;">
+                        @ May 2025
+                    </p>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>abcdefghijklmnopqrstuvwxyz</p>
+        <p>Contact:</p>
+        <a href="mailto:lavalleydesign@gmail.com" style="margin-left: 0.5rem">lavalleydesign@gmail.com</a>
 
         <section>
             <button class="button-theme" data-theme="light">
