@@ -168,10 +168,16 @@ header, footer {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
     animation: headerIn 0.4s ease;
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
     animation: footerIn 0.4s ease;
 }
 
@@ -210,7 +216,6 @@ main {
     width: 100%;
     flex: 1 0 auto;
     color: var(--text-color);
-    height: 1px;
 
     display: flex;
     flex-direction: column;
@@ -223,6 +228,8 @@ main {
 
     transition: opacity 0.4s ease, transform 0.4s ease;
     animation: mainIn 0.4s ease;
+    padding-top: calc(1rem + 20px);
+    padding-bottom: calc(1rem + 20px);
 }
 
 main p {
